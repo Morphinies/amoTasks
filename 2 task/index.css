@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    color: #e4e5ea;
+    font-family: "Inter", sans-serif;
+}
+
+body,
+.container {
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    background: #0e1014;
+    padding: 46px 150px 20px 150px;
+}
+
+a {
+    font-size: 16px;
+    color: #e4e5ea;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+button {
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+a:hover,
+button:hover {
+    transform: scale(1.1);
+}
+
+/* bg circle */
+
+.bg-circle-1,
+.bg-circle-2,
+.bg-circle-3,
+.bg-circle-4,
+.bg-circle-5 {
+    border-radius: 100%;
+    position: absolute;
+}
+
+.bg-circle-1 {
+    top: 300px;
+    left: -52px;
+    opacity: 15%;
+    width: 200px;
+    height: 200px;
+    background: #961a1a;
+    box-shadow: 0 0 150px 150px #961a1a;
+}
+
+.bg-circle-2 {
+    top: 83px;
+    left: 519px;
+    width: 83px;
+    height: 83px;
+    box-shadow: 3px 6px 27px -10px #df7d7d40;
+    background: radial-gradient(
+            64% 64% at 27.25% 26.5%,
+            rgba(255, 208, 208, 0.536) 0%,
+            rgba(212, 93, 93, 0.264) 59.67%,
+            rgba(167, 49, 49, 0.248) 78.59%,
+            rgba(130, 25, 25, 0.248) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.bg-circle-3 {
+    top: -154px;
+    left: 602px;
+    width: 259px;
+    height: 259px;
+    opacity: 5%;
+    background: #833ab4;
+    box-shadow: 0 0 200px 200px #833ab4;
+}
+
+.bg-circle-4 {
+    top: 2px;
+    left: 868px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 3px 6px 27px -10px #b176d940;
+    background: radial-gradient(
+            64% 64% at 27.25% 26.5%,
+            rgba(236, 208, 255, 0.64) 0%,
+            rgba(161, 93, 207, 0.24) 59.67%,
+            rgba(118, 49, 164, 0.208) 78.59%,
+            rgba(86, 24, 128, 0.232) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.bg-circle-5 {
+    top: 547px;
+    left: 851px;
+    width: 28px;
+    height: 28px;
+    box-shadow: 3px 6px 27px -10px #df7d7d40;
+    background: radial-gradient(
+            64% 64% at 27.25% 26.5%,
+            rgba(255, 208, 208, 0.48) 0%,
+            rgba(212, 93, 93, 0.248) 59.67%,
+            rgba(167, 49, 49, 0.264) 78.59%,
+            rgba(130, 25, 25, 0.232) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-img {
+    margin-top: 11px;
+    display: block;
+}
+
+.logo-thesis {
+    font-size: 10px;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header-nav {
+    display: flex;
+    margin-top: 15px;
+    column-gap: 30px;
+    margin-left: 52px;
+}
+.header-nav a {
+    align-self: flex-start;
+}
+
+.contacts {
+    flex: 1;
+    display: flex;
+    margin-top: 14px;
+    column-gap: 47px;
+    justify-content: flex-end;
+}
+
+.phone a {
+    font-weight: 500;
+}
+
+.social-network {
+    display: flex;
+    cursor: default;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+
+.social-network a {
+    display: block;
+    align-self: flex-start;
+}
+
+/* main */
+
+.main {
+    display: flex;
+    margin-top: 90px;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+}
+
+.company-name-span {
+    font-weight: 900;
+    background: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.thesis {
+    font-size: 18px;
+    margin-top: 30px;
+    max-width: 275px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.offer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.offer-title {
+    max-width: 291px;
+    font-size: 18px;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+.offer-title span {
+    background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.features-list {
+    gap: 30px;
+    margin-top: 40px;
+    display: grid;
+    grid-template: auto auto/ auto auto;
+}
+
+.feature {
+    max-width: 135px;
+}
+
+.feature-name {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.feature-thesis {
+    margin-top: 6px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+}
+
+.offer-btn {
+    border: none;
+    color: #e4e5ea;
+    font-weight: 500;
+    margin-top: 61px;
+    padding: 21px 34px;
+    align-self: center;
+    background-color: #4077f3;
+    transition: all 0.1s;
+}
+
+/* footer */
+
+.footer {
+    margin-top: 124px;
+}
+
+.footer-container {
+    display: flex;
+    column-gap: 98px;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-menu {
+    flex: 1;
+}
+
+.footer-nav-contacts * {
+    align-self: flex-end;
+    row-gap: 20px;
+}
+
+.footer-nav-contacts .social-network {
+    margin-top: 21px;
+}
+
+.footer-nav-contacts .address {
+    margin-top: 20px;
+}
+
+.footer-nav .phone a {
+    font-weight: 500;
+}
+
+.footer-nav-list {
+    width: min-content;
+    display: flex;
+    row-gap: 10px;
+    column-gap: 52px;
+    flex-wrap: wrap;
+    max-height: 145px;
+    flex-direction: column;
+}
+
+.footer-nav-title {
+    color: #656566;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-nav a {
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.copyright {
+    display: flex;
+    margin-top: 33px;
+    flex-direction: column;
+}
+
+.copyright * {
+    font-size: 12px;
+    font-weight: 400;
+    align-self: flex-end;
+    font-family: "Montserrat", sans-serif;
+}
+
+.copyright a {
+    text-decoration: underline;
+}
